@@ -1,12 +1,13 @@
-import { ColumnDef } from '@tanstack/react-table'
-import { cn } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
-import { Checkbox } from '@/components/ui/checkbox'
-import LongText from '@/components/long-text'
-import { callTypes, userTypes } from '../data/data'
-import { User } from '../data/schema'
-import { DataTableColumnHeader } from './data-table-column-header'
-import { DataTableRowActions } from './data-table-row-actions'
+import { ColumnDef } from '@tanstack/react-table';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Checkbox } from '@/components/ui/checkbox';
+import LongText from '@/components/long-text';
+import { callTypes, userTypes } from '../data/data';
+import { User } from '../data/schema';
+import { DataTableColumnHeader } from './data-table-column-header';
+import { DataTableRowActions } from './data-table-row-actions';
+
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -77,14 +78,14 @@ export const columns: ColumnDef<User>[] = [
       <div className='w-fit text-nowrap'>{row.getValue('email')}</div>
     ),
   },
-  {
-    accessorKey: 'phoneNumber',
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Phone Number' />
-    ),
-    cell: ({ row }) => <div>{row.getValue('phoneNumber')}</div>,
-    enableSorting: false,
-  },
+  // {
+  //   accessorKey: 'phoneNumber',
+  //   header: ({ column }) => (
+  //     <DataTableColumnHeader column={column} title='Phone Number' />
+  //   ),
+  //   cell: ({ row }) => <div>{row.getValue('phoneNumber')}</div>,
+  //   enableSorting: false,
+  // },
   {
     accessorKey: 'status',
     header: ({ column }) => (
